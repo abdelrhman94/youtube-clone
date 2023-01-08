@@ -1,7 +1,25 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Box } from '@mui/material';
+import {
+  Navbar,
+  ChannelDetail,
+  Feed,
+  SearchFeed,
+  VideoDetail,
+} from './components';
 
-function App() {
-  return <h1>hello</h1>;
-}
+const App = () => (
+  <BrowserRouter>
+    <Box sx={{ background: '#000' }}>
+      <Navbar />
+      <Routes>
+        <Route path='/' exact element={<Feed />} />
+        <Route path='/video/:id' element={<VideoDetail />} />
+        <Route path='/channel/:id' element={<ChannelDetail />} />
+        <Route path='/search/:searchTerm' element={<SearchFeed />} />
+      </Routes>
+    </Box>
+  </BrowserRouter>
+);
 
 export default App;
