@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Stack } from '@mui/system';
 import { categories } from '../utils/constants';
 
