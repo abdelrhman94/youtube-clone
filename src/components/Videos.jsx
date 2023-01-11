@@ -1,9 +1,19 @@
-import React from 'react'
+import { Stack, Box } from '@mui/system';
 
-const Videos = ({video}) => {
+const Videos = ({ videos }) => {
   return (
-    <div>Videos</div>
-  )
-}
+    <Stack
+      direction='row'
+      flexWrap='wrap'
+      justifyContent='start'
+      gap={2}
+      color='#fff'
+    >
+      {videos.map((item, index) => (
+        <Box key={index}>{item.id.videoId}</Box>
+      ))}
+    </Stack>
+  );
+};
 
-export default Videos
+export default Videos;
