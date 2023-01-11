@@ -15,6 +15,7 @@ const SideBar = () => {
     >
       {categories.map((category) => (
         <button
+          key={category.name}
           className='category-btn'
           style={{
             background: category.name === selectedCategory && ' #fc1503',

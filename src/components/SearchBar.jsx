@@ -20,7 +20,7 @@ const SearchBar = () => {
         className='search-bar'
         placeholder='Search...'
         value=''
-        onChange={() => {}}
+        onChange={(e) => console.log(e.target.value)}
         type='text'
       />
       <IconButton type='submit' sx={{ p: '10px', color: 'red' }}>
