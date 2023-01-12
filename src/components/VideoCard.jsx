@@ -4,7 +4,6 @@ import { CheckCircle } from '@mui/icons-material';
 
 // we will use this if we can't fetch data
 import {
-  demoThumbnailUrl,
   demoVideoUrl,
   demoVideoTitle,
   demoChannelUrl,

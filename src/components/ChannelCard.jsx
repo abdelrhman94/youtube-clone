@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import { Box, Typography, CardContent, CardMedia } from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
 
 // we will use this if we can't fetch data
