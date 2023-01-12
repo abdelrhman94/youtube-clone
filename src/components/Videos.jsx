@@ -1,4 +1,5 @@
 import { Stack, Box } from '@mui/system';
+import { VideoCard, ChannelCard } from './';
 
 const Videos = ({ videos }) => {
   return (
@@ -10,7 +11,10 @@ const Videos = ({ videos }) => {
       color='#fff'
     >
       {videos.map((item, index) => (
-        <Box key={index}>{item.id.videoId}</Box>
+        <Box key={index}>
+          {item.id.videoId && <VideoCard video={item} />}
+          {item.id.channelId && <ChannelCard channel={item} />}
+        </Box>
       ))}
     </Stack>
   );
