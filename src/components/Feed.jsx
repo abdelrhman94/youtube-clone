@@ -9,7 +9,6 @@ const Feed = () => {
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
-      console.log(data.items);
       setVideos(data.items);
     });
   }, [selectedCategory]);
@@ -18,7 +17,7 @@ const Feed = () => {
     <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
       <Box
         sx={{
-          height: { sx: 'auto', md: '92vh' },
+          height: { sx: 'auto', md: '100vh' },
           borderRight: '1px solid #3d3d3d',
           px: { sx: 0, md: 2 },
         }}
