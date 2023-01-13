@@ -1,7 +1,10 @@
 import { Stack, Box } from '@mui/system';
-import { VideoCard, ChannelCard } from './';
+import { VideoCard, ChannelCard, Loading } from './';
 
 const Videos = ({ videos }) => {
+  if (!videos?.length) {
+    return <Loading />;
+  }
   return (
     <Stack
       direction='row'
